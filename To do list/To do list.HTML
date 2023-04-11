@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>To do list</title>
+</head>
+<body class="bg-gray-200 p-4">
+    <h1 class="text-2xl font-bold mb-4">To-Do List</h1>
+    <div class="mb-4">
+      <input type="text" class="border border-gray-400 p-2 mb-2 rounded-lg" id="myInput">
+      <button onclick="newElement()" class="bg-blue-500 text-white p-2 mb-2 rounded-lg">Add Task</button>
+      <button onclick="cleanList()" class="bg-red-500 text-white p-2 mb-2 rounded-lg">Clean all list</button>
+      <button onclick="filterList()" class="bg-blue-500 text-white p-2 mb-2 rounded-lg">Search</button>
+      <ul class="list-none" id="myUL">
+        <li class="border border-gray-400 p-2 mb-2 flex justify-between rounded-lg" >
+            <div class="flex place-items-center">
+                <input type="checkbox" class="border-gray-400 mr-2  checked:bg-blue-500" />
+               This is just a style sample, and it is not connected to JavaScript.(It cannot be deleted)
+            </div>
+          <button class="bg-red-500 text-white w-20 h-6 rounded-full ml-2" id="button">X</button>
+        </li>
+      </ul>
+    </div>
+
+
+    <script>
+        function newElement(){
+           var li = document.createElement("li");
+           li.classList.add("border", "border-gray-400", "p-2", "rounded-lg", "mb-2", "flex", "justify-between");
+           var div = document.createElement("div");
+           div.classList.add("flex", "place-items-center");
+           var inputValue = document.getElementById("myInput").value;
+           var t = document.createTextNode(inputValue)
+           div.appendChild(t);
+           li.appendChild(div);
+           var input = document.createElement("input");
+           input.type = "checkbox";
+           input.classList.add("border-gray-400", "mr-2", "checked:bg-blue-500");
+           div.insertBefore(input, t);
+
+            var btn = document.createElement("button")
+            btn.classList.add("bg-red-500", "text-white", "w-20", "h-6", "rounded-full", "ml-2");
+            btn.innerHTML = "X";
+            btn.onclick = function() {
+                li.remove();
+            }
+            li.appendChild(btn);
+
+
+           if (inputValue === '') {
+                alert("You must write something!");
+           }else{
+                document.getElementById("myUL").appendChild(li);
+           }
+           document.getElementById("myInput").value="";
+        }
+
+        function cleanList() {
+            var list = document.getElementById("myUL");
+            list.innerHTML = "";
+}
+
+        function filterList() {
+                    var input, filter, ul, li, div, i, txtValue;//变量 input、filter、ul、li、div、i 和 txtValue。
+                    input = document.getElementById("myInput");//通过使用 document.getElementById 获取 ID 为 "myInput" 的元素，并将其赋值给 input 变量。
+                    filter = input.value.toLowerCase();//获取 input 元素的值，将其转换为小写字母，并将其赋值给 filter 变量。
+                    ul = document.getElementById("myUL");//通过使用 document.getElementById 获取 ID 为 "myUL" 的元素，并将其赋值给 ul 变量。
+                    li = ul.getElementsByTagName("li");//获取 ul 元素中所有的 li 元素，并将它们赋值给 li 变量。
+                    for (i = 0; i < li.length; i++) { //开始一个循环，遍历所有的 li 元素。
+                        div = li[i].getElementsByTagName("div")[0];//获取当前 li 元素中第一个 div 元素，并将其赋值给 div 变量。
+                        txtValue = div.textContent || div.innerText;//获取 div 元素的文本内容，并将其赋值给 txtValue 变量。如果 div 元素中有 textContent 属性，则使用该属性，否则使用 innerText 属性。
+                        if (txtValue.toLowerCase().indexOf(filter) >= 0) {//检查当前 li 元素的文本内容是否包含 filter 变量的值。如果是，则显示该元素，否则隐藏该元素。
+                        li[i].style.display = "";//如果该 li 元素应该被显示，则设置其样式的 display 属性为空字符串，以使其在页面上显示。
+                        } else {//如果该 li 元素不应该被显示，则将其样式的 display 属性设置为 "none"，以使其在页面上隐藏。
+                        li[i].style.display = "none";//隐藏该 li 元素。
+                        }
+                    }
+                }
+
+    </script>
+
+  </body>
+</html>
