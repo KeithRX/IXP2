@@ -1,0 +1,245 @@
+.body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+.navbar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1030;
+    background-color: black;
+    opacity: 80%;
+    padding: 20px;
+    margin: 0 0 0 0;
+}
+.container {
+    position: relative;
+    background-color: black;
+    margin-left: 20%;
+    margin-right: 20%;
+    padding-top:
+}
+
+.navlink1{
+    padding: auto;
+    color: white;
+    align-self: flex-start;
+}
+
+.navlink2{
+    padding: 0px 20px 0px 20px ;
+    color: white;
+    float:right
+}
+
+
+
+.section1{
+    margin: 70px 70px 20px 70px ;
+    padding: 34 0 34 0;
+    border-bottom: 1px solid
+}
+.h1{
+    text-align: center;
+    padding: 10px 20px 0px 20px;
+    border-color: ;
+}
+
+.h2{
+    font-size: medium;
+    font-weight: 500;
+    text-align: center;
+}
+
+.section2{
+    align-items: center;
+}
+
+
+.section3{
+    width: auto;
+    align-items: center;
+    background-color: rgb(234, 234, 234);
+    margin: 20px 70px 20px 70px ;
+    padding: 0px 10px 0px 10px;
+    border-radius: 20px;
+}
+
+.image1{
+    border-radius: 15px;
+    margin: auto;
+    width: 600px;
+    height: 350px;
+    background-image: url(images/Apple-HomePod-hero-230118.jpg);
+    background-size: 600px 350px;
+    
+}
+
+.buttons{
+    padding: 10px 0px 10px 0px;
+    width: 600px;
+    margin: auto;
+    display:flex
+
+}
+
+.btu{
+    margin: auto;
+    border-radius: 40px;
+    flex: 0 0 auto;
+    padding: 10px;
+    background-color: blue;
+    color: aliceblue;
+    flex:  0 0 auto;
+}
+
+.image2{
+    border-radius: 15px;
+    margin: auto;
+    width: 600px;
+    height: 350px;
+    background-image: url(images/Apple-Mac-mini-M2-and-M2-Pro-hero-230117.jpg);
+    background-size: 600px 350px;
+    
+}
+
+.image3{
+    border-radius: 15px;
+    margin: auto;
+    width: 600px;
+    height: 350px;
+    background-image: url(images/Apple-MacBook-Pro-M2-Pro-and-M2-Max-hero-230117.jpg);
+    background-size: 600px 350px;
+    
+}
+
+.section4{
+    width: 100%;
+    height: 400px;
+    background-image: url(images/Apple-HomePod-hero-230118.jpg);
+    background-size: cover;
+}
+
+.section5{
+    border-radius: 5px;
+    background-color: gray;
+    margin: 20px 20px 20px 20px;
+    height: 600px;
+    display: flex;
+}
+
+.image4{
+    border-radius: 5px;
+    width: 50%;
+    height: 600px;
+    background-image: url(images/Apple-HomePod-internals-230118_inline.jpg.medium.jpg);
+    background-size: cover;
+    flex:  0 0 auto;
+}
+.paragraph1{
+    color: white;
+    padding: 0px 20px 0 20px;
+    font-size: 20px;
+    line-height: 40px;
+}
+
+.image5{
+    border-radius: 5px;
+    width: 50%;
+    height: 600px;
+    background-image: url(images/Apple-HomePod-ecosystem-230118_big.jpg.large.jpg);
+    background-size: cover;
+    flex:  0 0 auto;
+}
+
+.paragraph2{
+    color: white;
+    padding: 0px 20px 0 20px;
+    font-size: 20px;
+    line-height: 25px;
+}
+
+.section6{
+    width: 100%;
+    height: 600px;
+    background-image: url(images/Apple-MacBook-Pro-M2-Pro-and-M2-Max-hero-230117.jpg);
+    background-size: cover;
+}
+
+.image6{
+    border-radius: 5px;
+    width: 50%;
+    height: 600px;
+    background-image: url(images/Apple-M2-chips-M2-Pro-230117_big.jpg.large.jpg);
+    background-size: cover;
+    flex:  0 0 auto;
+}
+.image7{
+    border-radius: 5px;
+    width: 50%;
+    height: 600px;
+    background-image: url(images/Apple-M2-chips-M2-Max-230117.jpg);
+    background-size: cover;
+    flex:  0 0 auto;
+}
+
+
+
+
+.section7{
+    width: 100%;
+    height: 600px;
+    background-image: url(images/Apple-Mac-mini-M2-and-M2-Pro-hero-230117.jpg);
+    background-size: cover;
+}
+
+.image8{
+    border-radius: 5px;
+    width: 50%;
+    height: 600px;
+    background-image: url(images/Apple-Mac-mini-M2-back-230117_big.jpg.large.jpg);
+    background-size: cover;
+    flex:  0 0 auto;
+}
+.image9{
+    border-radius: 5px;
+    width: 50%;
+    height: 600px;
+    background-image: url(images/Apple-M2-chips-M2-Pro-230117_big.jpg.large.jpg);
+    background-size: cover;
+    flex:  0 0 auto;
+}
+
+@media (max-width: 1200px) {
+    .navbar{
+        color: aliceblue;
+        background-color: black;
+        opacity: 100%;
+        padding: 10px;
+    }
+    .h1{
+        color: white;
+    }
+    .h2{
+        color: white;
+    }
+    body {
+        background-color: black;
+    }
+    .section3 {
+        background-color: gray;
+    }
+
+    
+}
+
+@media (min-width: 1500) {
+    
+    body {
+        background-color: white;
+    }
+
+}
+
